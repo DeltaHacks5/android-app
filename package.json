@@ -1,0 +1,11 @@
+{
+  "name": "android-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:DeltaHacks5/android-app.git",
+  "author": "dquach217 <dq6180@rit.edu>",
+  "license": "MIT",
+  "dependencies": {
+    "firebase-admin": "^6.5.1"
+  }
+}
