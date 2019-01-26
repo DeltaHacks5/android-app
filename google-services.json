@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1005197218391",
+    "firebase_url": "https://sport-scanner.firebaseio.com",
+    "project_id": "sport-scanner",
+    "storage_bucket": "sport-scanner.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005197218391:android:b485a3559b2e4610",
+        "android_client_info": {
+          "package_name": "me.susieson.sportscanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005197218391-lsn1k0m0r6b8icv2nl0iefaj5t4mo6hp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOzBmFNpisJaU4YEGcSMGxL9Ts0id00f4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
