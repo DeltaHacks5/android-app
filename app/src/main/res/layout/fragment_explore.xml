@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ExploreFragment">
+    android:layout_height="match_parent">
 
     <FrameLayout
         android:id="@+id/map_fragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true" />
+        android:layout_height="match_parent" />
 
-    <!--<include
+    <include
+        android:id="@+id/bottom_sheet"
         layout="@layout/bottom_sheet"
-        app:layout_anchor="@+id/navigation"
-        app:layout_anchorGravity="bottom|center" />-->
+        android:visibility="gone" />
 
-</android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>
