@@ -46,7 +46,9 @@ public class MainActivity extends AppCompatActivity
     public static final LatLng hamilton = new LatLng(43.255722, -79.871101);
     private static final String EXPLORE_FRAGMENT_TAG = "explore-fragment";
     private static final String CHAT_FRAGMENT_TAG = "chat-fragment";
+    private static final String SOCIAL_FRAGMENT_TAG = "social-fragment";
     private ExploreFragment mExploreFragment;
+    private SocialFragment mSocialFragment;
     private ChatFragment mChatFragment;
     private FusedLocationProviderClient mFusedLocationClient;
     private FragmentManager mFragmentManager;
@@ -77,7 +79,7 @@ public class MainActivity extends AppCompatActivity
 
         StrictMode.setThreadPolicy(StrictMode.ThreadPolicy.LAX);
         try {
-            URL url = new URL("http://sportscanner.serveo.net");
+            URL url = new URL("http://sportscanner.net");
             URLConnection con = url.openConnection();
             InputStream in = con.getInputStream();
             String encoding = con.getContentEncoding();
@@ -140,6 +142,14 @@ public class MainActivity extends AppCompatActivity
                 }
                 mFragmentManager.beginTransaction().replace(R.id.main_container, exploreFragment, EXPLORE_FRAGMENT_TAG).addToBackStack(null).commit();
                 mExploreFragment = (ExploreFragment) exploreFragment;
+                return true;
+            case R.id.action_social:
+                Fragment socialFragment = mFragmentManager.findFragmentByTag(SOCIAL_FRAGMENT_TAG);
+                if (socialFragment == null) {
+                    socialFragment = new SocialFragment();
+                }
+                mFragmentManager.beginTransaction().replace(R.id.main_container, socialFragment, SOCIAL_FRAGMENT_TAG).addToBackStack(null).commit();
+                mSocialFragment = (SocialFragment) socialFragment;
                 return true;
             case R.id.action_chat:
                 Fragment chatFragment = mFragmentManager.findFragmentByTag(CHAT_FRAGMENT_TAG);
